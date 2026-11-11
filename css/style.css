@@ -93,3 +93,18 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-10px) rotate(-
   .hero-img { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
+/* Página legal */
+.legal-page {
+  padding-top: 10rem;
+  max-width: 46rem;
+}
+
+.legal-page h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 2.5rem 0 .75rem;
+}
+
+.legal-page p {
+  margin: 0 0 1rem;
+}
