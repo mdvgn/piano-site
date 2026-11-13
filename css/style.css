@@ -257,3 +257,14 @@ body.menu-open .burger span:nth-child(3) {
     order: 0;
   }
 }
+
+/* Phrase d'accroche de la bannière */
+.hero-tag {
+  margin: 1rem auto 0;
+  max-width: 26rem;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, .92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .6);
+}
