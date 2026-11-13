@@ -181,33 +181,52 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-10px) rotate(-
   }
 }
 
-/* Burger permanent, grisé tant que le menu est fermé */
+/* Burger permanent : rond blanc, plus petit */
 .burger {
   position: fixed;
   top: 1.5rem;
   right: max(1.25rem, calc((100vw - 64rem) / 2 + 1.25rem));
   z-index: 40;
+  width: 33px;
+  height: 33px;
+  padding: 0;
+  gap: 5px;
+  align-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .9);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
 }
 
 .burger span {
+  width: 17px;
+  height: 2px;
   background: #8a8a8a;
 }
 
 .burger:hover span {
-  background: var(--black);
+  background: #000;
 }
 
-/* Menu ouvert : le burger devient blanc, sans fond */
+/* Menu ouvert : le rond reste blanc, la croix est noire */
 body.menu-open .burger {
-  background: transparent;
-  box-shadow: none;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
 }
 
 body.menu-open .burger span {
-  background: var(--white);
+  background: #000;
+}
+
+body.menu-open .burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+body.menu-open .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+body.menu-open .burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .method-intro {
