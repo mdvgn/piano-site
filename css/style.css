@@ -246,3 +246,14 @@ body.menu-open .burger span:nth-child(3) {
   font-size: 1rem;
   color: var(--grey);
 }
+
+/* Biografía : texte d'abord sur mobile, photo à gauche sur ordinateur */
+.bio img {
+  order: 2;
+}
+
+@media (min-width: 800px) {
+  .bio img {
+    order: 0;
+  }
+}
