@@ -236,3 +236,13 @@ body.menu-open .burger span:nth-child(3) {
   font-weight: 300;
   line-height: 1.45;
 }
+
+.rows li {
+  flex-wrap: wrap;
+}
+
+.pack {
+  flex-basis: 100%;
+  font-size: 1rem;
+  color: var(--grey);
+}
