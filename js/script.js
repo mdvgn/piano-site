@@ -30,3 +30,23 @@ if ('IntersectionObserver' in window) {
 } else {
   items.forEach((el) => el.classList.add('is-visible'));
 }
+
+// Bouton permanent « Reservar »
+const cta = document.querySelector('.cta-fixed');
+if (cta && 'IntersectionObserver' in window) {
+  const watched = ['.hero', '#clases', '#contacto']
+    .map((sel) => document.querySelector(sel))
+    .filter(Boolean);
+  const visible = new Set();
+
+  const update = () => cta.classList.toggle('is-shown', visible.size === 0);
+
+  const watcher = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) visible.add(entry.target);
+      else visible.delete(entry.target);
+    });
+    update();
+  });
+  watched.forEach((el) => watcher.observe(el));
+}
